@@ -17,13 +17,12 @@ import {
   PerspectiveCamera,
   useCurrentSheet,
 } from "@theatre/r3f";
-import studio from "@theatre/studio";
-import extension from "@theatre/r3f/dist/extension";
+// import studio from "@theatre/studio";
+// import extension from "@theatre/r3f/dist/extension";
 
-import Globe from "./Globe";
+ 
 import DemoTextAnimation from "./DemoTextAnimation";
 import BreakCode from "./BreakCode";
-
 import AnimatedTextSequence from "./AnimatedTextSequence";
 import AnimatedTextCharacter from "./SplitTextCharacter";
 import RotatingBox from "./RoutingDiv";
@@ -33,15 +32,14 @@ import WeOffer from "./WeOffer";
 import ProfilePage from "./ProfilePage";
 import Footer from "./Footer";
 
-import DesignTextEffect from "./DesignTextEffect";
-import DevelopmentTextEffect from "./DevelopmentTextEffect";
-import AnimationTextEffect from "./AnimationTextEffect";
-import MapAnimation from "./MapAnimation";
+ 
 // studio.initialize();
 // studio.extend(extension);
 import CloseTagAnimation from "./CloseTagAnimation";
 import ErrorBurnerSvg from "./ErrorBurnerSvg";
-
+ 
+ 
+ 
 
 export default function ScrollSection() {
   const sheet = getProject("myProject", { state: theatreState }).sheet("Scene");
@@ -50,8 +48,10 @@ export default function ScrollSection() {
     setMouse([event.clientX, event.clientY]);
   };
 
+
+
   const isMobile = window.innerWidth <= 768; // Adjust the width breakpoint as needed
-  const pages = isMobile ? 8 : 7;
+  const pages = isMobile ? 9 : 8.5;
 
 
 
@@ -70,26 +70,115 @@ export default function ScrollSection() {
           </SheetProvider>
 
           <Scroll html style={{ position: "absolute", width: "100vw" }}>
-            <div className="mainLogo" style={{width:"300px", margin:"auto",}}>
-            <div class="flex">
+           
+           
+            <div className="mainLogo" style={{ width: "300px", margin: "auto",  }}>
+              <div class="flex">
                 <div class="flex-none w-14 h-14">
-                 <CloseTagAnimation />
+                  <CloseTagAnimation />
                 </div>
                 <div class="grow h-14">
-                   <ErrorBurnerSvg />
+                  <ErrorBurnerSvg />
                 </div>
-               
+
               </div>
             </div>
+          
+        
+          <section>
+              <div className="contanier">
+                <div>
+                  <h1 className=" font-semibold leading-[95px]  p-10">
+                    <AnimatedTextSequence />
+                  </h1>
+                </div>
+                <div className="barheader p-10 pl-10 py-52 ">
+                  <HeaderBar />
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <div className="contanier">
+              <div style={{ position:"relative" , width: "100vw", height: "50vh", marginTop:"10%", left:"20%", }}>
+              <AnimatedTextCharacter text="React Devloper From Kolkata,India" />
+              </div>
+            </div>
+            </section> 
+ 
+            {/* --------------- Desribe text scroll overlay color ANIMATION------------------ */}
+            <section>
+              <div className="sm:conatiner md:container lg:container xl:container 2xl:container">
+                <div className="demotextFontSM ">
+                  <DemoTextAnimation />
+                </div>
+              </div>
+            </section>
+
+            {/* ---------biswajit card / prosenjit card ----------- */}
+            <section className="text-gray-600 body-font sm:container md:container lg:container xl:container 2xl:container mx-auto clear-both ">
+              <ProfilePage />
+
+              <div className="grid justify-items-center pt-5">
+                <div >
+                  <AnimatedTextCharacter text=".. What we offer .." />
+                </div>
+              </div>
+            </section>
+
+            {/* ---------what we offer ----------- */}
+
+            <section>
+              <div>
+
+
+
+
+                <div>
+                  <WeOffer />
+                </div>
+              </div>
+            </section>
+
+            {/* ---------RotatingBox ----------- */}
+
+            <section>
+              <div className=" md:container md:mx-auto lg:container lg:mx-auto ">
+                <div className=" ">
+                  <RotatingBox />
+                </div>
+              </div>
+            </section>
+
+            {/* ---------Footer ----------- */}
+
+            <section>
+              <div className=" md:container md:mx-auto lg:container lg:mx-auto sm:container sm:mx-auto xl:container xl:mx-auto ">
+                <div className="">
+                  <ContactForm />
+                </div>
+
+                <div >
+                  <Footer />
+                </div>
+              </div>
+            </section>
+
+
+
             <motion.div
               style={{ position: "absolute" }}
               className="mt-10 "
               initial={{
+                left: "30px",
+                top: "15px",
                 height: 1,
                 width: 0,
                 backgroundColor: "#31016D",
               }}
               animate={{
+                left: "30px",
+                top: "15px",
                 height: 1,
                 width: "98vw",
                 backgroundColor: "#31016D",
@@ -178,97 +267,6 @@ export default function ScrollSection() {
                 ease: "linear",
               }}
             />
-            <section>
-              <div className="contanier">
-                <div>
-                <h1 className=" font-semibold leading-[95px]  p-10">
-                  <AnimatedTextSequence />
-                </h1>
-                </div>
-                <div className="barheader p-10 pl-10 py-52 ">
-                <HeaderBar />
-              </div>
-              </div> 
-            </section>
-
-                  
-            <div className="WorldMap">  
-            <div style={{position:"relative",  width: "100vw", height: "100vh", top:"0", }}>
-     <Canvas
-                  style={{ width: "100vw", height: "100vh", marginTop: " 0px" }}
-                >
-                  <Globe position={[0, 0.5, 4.5]} />
-                  <pointLight
-                    position={[1, 0, 1]}
-                    color="#AD00FF"
-                    intensity={0.5}
-                  />
-                  <pointLight
-                    position={[-1, 0, -1]}
-                    color="#0044FF"
-                    intensity={0.5}
-                  />
-                </Canvas>
-                </div>
-              </div>
-
-            {/* --------------- Desribe text scroll overlay color ANIMATION------------------ */}
-            <section>
-              <div className="sm:conatiner md:container lg:container xl:container 2xl:container">
-                <div className="demotextFontSM ">
-                  <DemoTextAnimation />
-                </div>
-              </div>
-            </section>
-
-            {/* ---------biswajit card / prosenjit card ----------- */}
-            <section className="text-gray-600 body-font sm:container md:container lg:container xl:container 2xl:container mx-auto clear-both ">
-              <ProfilePage />
-
-              <div className="grid justify-items-center">
-                  <div >
-                    <AnimatedTextCharacter text="What we offer .." />
-                  </div>
-                </div>
-            </section>
-
-            {/* ---------what we offer ----------- */}
-
-            <section>
-              <div>
-
-             
-
-
-                <div>
-                  <WeOffer />
-                </div>
-              </div>
-            </section>
-
-            {/* ---------RotatingBox ----------- */}
-
-            <section>
-              <div className=" md:container md:mx-auto lg:container lg:mx-auto ">
-                <div className=" ">
-                  <RotatingBox />
-                </div>
-              </div>
-            </section>
-
-            {/* ---------Footer ----------- */}
-
-            <section>
-              <div className=" md:container md:mx-auto lg:container lg:mx-auto sm:container sm:mx-auto xl:container xl:mx-auto ">
-                  <div className="">
-                  <ContactForm />
-                </div>
-
-                <div >
-                  <Footer />
-                </div>
-              </div>
-            </section>
           </Scroll>
         </ScrollControls>
         <EffectComposer>
@@ -295,11 +293,11 @@ function Scene() {
   const sheet = useCurrentSheet();
   const scroll = useScroll();
 
- 
+
   useFrame(() => {
-    
+
     const sequenceLength = val(sheet.sequence.pointer.length);
- 
+
     sheet.sequence.position = scroll.offset * sequenceLength;
   });
   const bgColor = "#100D14";
@@ -307,16 +305,13 @@ function Scene() {
   return (
     <>
       <color attach="background" args={[bgColor]} />
-  
       <e.pointLight theatreKey="LightBlue" position={[0, 0, 1]} />
       <e.pointLight theatreKey="LightPurple" position={[0, 0, -2]} />
-
       <e.pointLight theatreKey="LightWhite" position={[-1, 0, -1]} />
- 
       <e.mesh theatreKey="BreakCode" position={[0, 0, -1]}>
         <BreakCode />
       </e.mesh>
- 
+
       <PerspectiveCamera
         position={[0, 0, 0]}
         theatreKey="Camera"

@@ -1,5 +1,5 @@
 {
-  "homepage":"https://github.com/biswajitmee/errorburner",
+  "homepage": "https://github.com/biswajitmee/errorburner",
   "name": "camera-animation",
   "private": true,
   "version": "0.0.0",
@@ -7,16 +7,17 @@
   "scripts": {
     "start": "vite",
     "predeploy": "npm run build",
-    "deploy":"gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
     "@cyriacbr/react-split-text": "^1.0.0",
     "@react-spring/web": "^9.7.3",
-    "@react-three/drei": "^9.80.1",
-    "@react-three/fiber": "^8.13.6",
+    "@react-three/drei": "^9.80.5",
+    "@react-three/fiber": "^8.13.7",
     "@react-three/postprocessing": "^2.15.0",
+    "@react-three/rapier": "^1.1.1",
     "@rigo-m/react-split-text": "^1.0.1",
     "@theatre/core": "^0.5.1",
     "@theatre/r3f": "^0.5.1",

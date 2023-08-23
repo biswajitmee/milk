@@ -17,13 +17,13 @@ const WeOffer = () => {
                           initial={{
                             opacity: 0, 
                             width: "0",
-                            scale:1,
+                            height:"200px",  
                           }}
                           animate={{ opacity: 0,  scale: 1, }}
                           whileInView={{
                             opacity: 1, 
                             width: "100%",
-                            scale:"1",
+                            height:"200px",  
                           }}
                           transition={{
                             duration: 0.6,
@@ -59,15 +59,15 @@ const WeOffer = () => {
                           className="offer-text"
                           style={{ backgroundColor: "#000" }}
                           initial={{
-                            opacity: 0,                            
-                            scale: 1,
+                            opacity: 0,
+                            height:"200px",  
                             width: "0",
                             
                           }}
                           animate={{ opacity: 0,   scale: 1 }}
                           whileInView={{
                             opacity: 1,                          
-                            scale: 1,
+                            height:"200px", 
                             width: "100%",
                           }}
                           transition={{
@@ -105,13 +105,13 @@ const WeOffer = () => {
                           style={{ backgroundColor: "#000" }}
                           initial={{
                             opacity: 0,                           
-                            scale: 1,
+                            height:"200px",  
                             width: 0,
                           }}
                           animate={{ opacity: 0,  scale: 1, }}
                           whileInView={{
                             opacity: 1,                            
-                            scale: 1,
+                            height:"200px",  
                             width: "100%",
                           }}
                           transition={{

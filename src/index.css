@@ -919,6 +919,10 @@ video {
   padding-top: 2.25rem;
 }
 
+.pt-5{
+  padding-top: 1.25rem;
+}
+
 .text-center{
   text-align: center;
 }
@@ -1062,7 +1066,7 @@ video {
   } */
 
 section{
-  min-height:90vh;
+  min-height:100vh;
 }
 
 .main-box{

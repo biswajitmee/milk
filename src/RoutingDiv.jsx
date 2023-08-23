@@ -1,14 +1,9 @@
 import React, { useState } from "react";
 import { Canvas } from "@react-three/fiber";
-import BackgroundNew from "./BackgroundNew";
- import LineOrbit from "./LineOrbit";
+ 
  
  import AlienStone from "./components/AlienStone";
-import BlackSoul from "./BlackSoul";
-import RobotAnimation from "./RobotAnimation";
-
-import Fusion from "./Fusion";
-import Cycle from "./Cycle";
+ 
 
 const RotatingBox = () => {
   const [rotation, setRotation] = useState(0);
@@ -51,9 +46,6 @@ const RotatingBox = () => {
                 color="#BB05FB"
                 intensity={0.4}
               />
-          
-     
-
       <AlienStone position={[0, 0, 3.5]} />
             </Canvas>
           </div>
@@ -73,7 +65,7 @@ const RotatingBox = () => {
                 color="#54FB05"
                 intensity={150}
               />
-                <BlackSoul position={[18, 5.5, 30]}/>
+                <AlienStone position={[0, 0, 3.5]} />
             </Canvas>
           </div>
 
@@ -95,7 +87,7 @@ const RotatingBox = () => {
                 color="#0044FF"
                 intensity={0.5}
               />
-               <RobotAnimation  position={[-0.5, -0.5, 1.3]} />        
+                <AlienStone position={[0, 0, 3.5]} />  
             </Canvas>
           </div>
 
@@ -120,7 +112,7 @@ const RotatingBox = () => {
               />
               
 
-              <Fusion position={[-1, 1.5, 3]} />
+              <AlienStone position={[0, 0, 3.5]} />
             </Canvas>
           </div>
 
@@ -147,7 +139,7 @@ const RotatingBox = () => {
                 color="#0044FF"
                 intensity={100}
               />
-               <Cycle  position={[0.5, 1.5, 2]}/>
+                <AlienStone position={[0, 0, 3.5]} />
             </Canvas>
           </div>
 
@@ -176,7 +168,7 @@ const RotatingBox = () => {
                 color="#0044FF"
                 intensity={0.5}
               />
-               <LineOrbit />
+               <AlienStone position={[0, 0, 3.5]} />
             </Canvas>
           </div>
 
@@ -200,7 +192,7 @@ const RotatingBox = () => {
                 color="#0044FF"
                 intensity={0.5}
               />
-              <BackgroundNew position={[-2, -2, -2]} />
+              <AlienStone position={[0, 0, 3.5]} />
             </Canvas>
           </div>
 
@@ -226,7 +218,7 @@ const RotatingBox = () => {
                 color="#0044FF"
                 intensity={0.5}
               />
-              <BackgroundNew position={[-2, -2, -2]} />
+                <AlienStone position={[0, 0, 3.5]} />
             </Canvas>
           </div>
 

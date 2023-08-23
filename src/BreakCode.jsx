@@ -16,12 +16,7 @@ function BreakCode(props) {
           geometry={nodes.Cube005_cell007.geometry}
           material={materials["Material.005"]}
         />
-         {/* <e.mesh theatreKey="mesh2"
-          castShadow
-          receiveShadow
-          geometry={nodes.Cube005_cell007_1.geometry}
-          material={materials["Material.005"]}
-        /> */}
+         
       </group>
       <group position={[7.863, 19.238, -0.524]}>
       <e.mesh theatreKey="mesh3"
